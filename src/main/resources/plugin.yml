@@ -1,0 +1,9 @@
+name: HanBank
+version: '${project.version}'
+main: online.bingulhan.hanbank.HanBank
+authors: [ BingulHan ]
+description: Banka plugin
+website: online.bingulhan
+commands:
+  banka:
+    description: banka ana komutu
