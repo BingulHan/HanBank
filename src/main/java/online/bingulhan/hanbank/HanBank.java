@@ -10,6 +10,7 @@ import online.bingulhan.hanbank.lang.HanLang;
 import online.bingulhan.hanbank.lang.YamlLang;
 import online.bingulhan.hanbank.listener.MenuListener;
 import online.bingulhan.hanbank.listener.PlayerListener;
+import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.OfflinePlayer;
 import org.bukkit.entity.Player;
@@ -59,6 +60,11 @@ public final class HanBank extends JavaPlugin {
             playerManager.createAccount(player);
         }
 
+        if( Bukkit.getPluginManager().isPluginEnabled("PlaceholderAPI")){
+            //Registering placeholder will be use here
+            new BankHook().register();
+        }
+
         getServer().getConsoleSender().sendMessage(ChatColor.GREEN+" ");
         getServer().getConsoleSender().sendMessage(ChatColor.GREEN+"-------------------------");
         getServer().getConsoleSender().sendMessage(ChatColor.GREEN+" ");
@@ -67,6 +73,8 @@ public final class HanBank extends JavaPlugin {
         getServer().getConsoleSender().sendMessage(ChatColor.GREEN+" ");
         getServer().getConsoleSender().sendMessage(ChatColor.GREEN+"-------------------------");
         getServer().getConsoleSender().sendMessage(ChatColor.GREEN+" ");
+
+
 
     }
 
